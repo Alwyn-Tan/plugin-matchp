@@ -1,22 +1,26 @@
-# Plugin Branding and Images
+# Plugin for MatchP
+MatchP is a match-targeted protocol based on blockchain. And hackathon is, of course, a match. So why not build an AI agent for our hackathon? That is what we try to implement for this agent.
+We provide ACTIONs for answering questions about hackathon, especially for the wonderful AI Agent Hackathon held by TinTin, Flow and 0G.
 
-To maintain a consistent and professional appearance across the ElizaOS ecosystem, we recommend including the following assets in your plugin repository:
+Code built for answering information about the hackathon.
+```            [
+                {
+                    user: "{{user1}}",
+                    content: {
+                        text: "Tell me about the hackathon",
+                        action: "HACKATHON_HELP",
+                    },
+                },
+                {
+                    user: "MatchP Assistant",
+                    content: {
+                        text: "It's an AI Agent Hackathon held by TinTin, Flow and 0G from April 7th to 9th in Hong Kong!",
+                        actions: ["HACKATHON_HELP"],
+                    },
+                },
+            ],
+```
 
-1. **Required Images:**
-   - `logo.png` (400x400px) - Your plugin's square logo
-   - `banner.png` (1280x640px) - A banner image for your plugin
+This plugin is built on the template of [eliza-plugin-template][https://github.com/onflow/eliza-plugin-template/tree/bc6f8ff8ed9776aab597a2fad625aaea1b175f00], which is a eliza plugin for Flow blockchain, so install the dependencies at https://github.com/onflow/elizaOnFlow
 
-2. **Image Location:**
-
-   ```
-   plugin-name/
-   ├── images/
-   │   ├── logo.png
-   │   ├── banner.png
-   ```
-
-3. **Image Guidelines:**
-   - Use clear, high-resolution images
-   - Keep file sizes optimized (< 500KB for logos, < 1MB for banners)
-   - [Image example](https://github.com/elizaos-plugins/client-twitter/blob/main/images/banner.jpg)
-   - Include alt text for accessibility
+The ACTION is implemented in src/actions/hackathon-assistant.ts, see this file for details.
