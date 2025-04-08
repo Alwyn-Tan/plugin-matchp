@@ -1,10 +1,7 @@
-export * from "./actions/sampleAction";
-export * from "./actions/sampleFlowAction";
 export * from "./providers/sampleProvider";
 export * from "./services/sampleService";
-export * from "./samplePlugin";
-export * from "./sampleFlowPlugin";
+export * from "./actions/hackathon-assistant.ts"
 
-import { samplePlugin } from "./samplePlugin";
+import { HackathonAssistantAction } from "./actions/hackathon-assistant.ts";
 
-export default samplePlugin;
+export default HackathonAssistantAction;
